@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Player and Rating</title>
+</head>
+<body>
+  <h1>Audio Player and Rating</h1>
+
+  <select id="audioList" onchange="playSelectedAudio()">
+    <!-- Audio files will be dynamically added here -->
+  </select>
+
+  <p id="currentAudioNumber"></p>
+  
+  <input type="text" id="ratingTextBox" placeholder="Enter Rating" oninput="onRatingChange()">
+  <button id="saveButton" onclick="saveRating()">Save</button>
+
+  <audio controls id="audioPlayer"></audio>
+  
+  <p id="loadingStatus"></p>
+  
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
